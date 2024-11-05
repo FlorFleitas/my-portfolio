@@ -201,7 +201,6 @@ h2 {
 #home {
   background: radial-gradient(circle at 90% 80%, rgba(43, 43, 43, 0.2), rgba(43, 43, 43, 0) 30%);
   display: flex; /* Optional: to center contents */
-  align-items: center; /* Optional: vertically center contents */
   justify-content: center; /* Optional: horizontally center contents */
   height: 100vh; /* Adjust as needed to fill the viewport */
   overflow: hidden; /* Prevent overflow if necessary */
@@ -234,7 +233,6 @@ h2 {
 .dots {
   position: absolute;
   bottom: 70px;
-  left: 90px;
   display: flex;
   gap: 8px;
 }
