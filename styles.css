@@ -114,8 +114,8 @@ nav ul li:last-child a {
   justify-content: center;
   width: 55px;
   height: 55px;
-  background: #2b2b2b; /* Fondo de color oscuro */
-  border-radius: 50%; /* Esto hace el fondo circular */
+  background: rgb(43,43,43,.9); 
+  border-radius: 50%; 
   position: absolute;
   right: 0;
   margin: 40px;
@@ -125,9 +125,9 @@ nav ul li:last-child a {
 
 .line {
   height: 2px;
-  width: 20px; /* Ajustar el ancho para que no ocupe toda la circunferencia */
-  background: #d4d4d4; /* Color de las líneas en contraste con el fondo */
-  margin: 2px auto; /* Centrar las líneas dentro del círculo */
+  width: 20px; 
+  background: #d4d4d4; 
+  margin: 2px auto; 
   transition: all 0.3s ease;
 }
 
