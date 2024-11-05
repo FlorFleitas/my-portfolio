@@ -316,7 +316,7 @@ h2 {
 .about-text p, .education-text li{
   letter-spacing: 1px;
   font-family: "Poppins", sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
   letter-spacing: 2px;
   font-size: 18px;
@@ -517,7 +517,7 @@ justify-content: center;
 .work-text p {
   letter-spacing: 1px;
   font-family: "Poppins", sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
   letter-spacing: 2px;
   font-size: 18px;
