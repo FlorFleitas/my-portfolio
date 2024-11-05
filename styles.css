@@ -353,7 +353,7 @@ h2 {
 .education-flex {
   display: flex;
   gap: 8px;
-  max-width: 45%;
+  max-width: 55%;
 }
 
 .left-image {
