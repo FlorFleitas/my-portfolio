@@ -414,41 +414,50 @@ h2 {
 
 /*LOGOS SLIDER*/
 #logo-slider {
-  overflow: hidden; /* Hide overflow */
-  width: 100%; /* Full width */
-  position: relative; /* For absolute positioning of the slider */
-}
-@media (width>768px) {
-  #logo-slider{
-    padding: 90px 0;
-  }
+  display: grid;
+  place-items: center;
+  padding: 90px 0;
+  background-color: #d4d4d4;
+  overflow: hidden; /* Ensures no overflow shows outside of the viewport */
 }
 
 .slider {
-  display: flex; 
-  animation: scroll 60s linear infinite; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .slider-items {
+  gap: 70px;
   display: flex;
-  gap: 90px;
+  align-items: center;
+  animation: scrolling 70s linear infinite;
+  width: calc(100%); 
+}
+
+@media (width<768px) {
+  .slider-items {
+    animation: scrolling 10s linear infinite;
+    gap: 10px;
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scrolls only halfway for a loop */
+  }
 }
 
 .slider-items img {
   width: 100px; 
-  margin: 0 15px; 
-  filter: invert(0%) sepia(5%) saturate(3064%) hue-rotate(307deg) brightness(94%) contrast(80%);
+  margin: 0 20px;
+  filter: invert(0%) sepia(3%) saturate(5560%) hue-rotate(359deg) brightness(92%) contrast(80%);
 }
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0); /* Start position */
-  }
-  100% {
-    transform: translateX(-50%); /* Move left to the middle */
-  }
-}
-
 
 
 /*WORK EXPERIENCE*/

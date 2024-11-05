@@ -193,6 +193,32 @@ menuLinks.forEach(link => {
         menu.classList.remove('show');
     });
 });
+const slider = document.querySelector('.slider');
+const sliderItems = document.querySelector('.slider-items');
+
+// Duplicate the items to ensure continuous scrolling
+const clonedItems = sliderItems.innerHTML;
+sliderItems.innerHTML += clonedItems; // Append cloned items to create an infinite loop effect
+
+slider.style.width = `${sliderItems.scrollWidth}px`;
+
+// Function to keep the slider moving
+function startSlider() {
+  let scrollAmount = 0;
+  const scrollStep = .1; // How fast the slider moves
+
+  const interval = setInterval(() => {
+    scrollAmount += scrollStep;
+    sliderItems.style.transform = `translateX(-${scrollAmount}px)`;
+
+    // Reset position if reached the end of the cloned items
+    if (scrollAmount >= sliderItems.scrollWidth / 2) {
+      scrollAmount = 0; 
+    }
+  }, 16); 
+}
+
+startSlider();
 
 </script>
 
