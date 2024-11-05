@@ -8,6 +8,7 @@
 body {
   font-family: "Almarai", sans-serif;
   color: #2b2b2b;
+  background-color: #d4d4d4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -433,12 +434,13 @@ h2 {
   display: flex;
   align-items: center;
   animation: scrolling 70s linear infinite;
-  width: calc(90%); /* Ensures the duplicated items have enough space */
+  width: calc(100%); 
 }
 
 @media (width<768px) {
   .slider-items {
-    animation: scrolling 12s linear infinite;
+    animation: scrolling 10s linear infinite;
+    gap: 10px;
   }
 }
 
