@@ -19,12 +19,12 @@
           </div>
           <nav class="menu" id="menu">
               <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#work">Work Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="menu-link">Home</a></li>
+                <li><a href="#about" class="menu-link">About Me</a></li>
+                <li><a href="#education" class="menu-link">Education</a></li>
+                <li><a href="#work" class="menu-link">Work Experience</a></li>
+                <li><a href="#projects" class="menu-link">Projects</a></li>
+                <li><a href="#contact" class="menu-link">Contact</a></li>
               </ul>
           </nav>
       </div>
@@ -73,27 +73,6 @@
       </div>
     </div>
   </section>
-  <!-- <section id="education">
-    <div class="education-text">
-    <h2>Education</h2>
-    <h3>Full Stack Web Developer</h3>
-    <h4>Henry | 2022</h4>
-    <ul>
-      <li>700+ hours of learning.</li>
-      <li>Front-End, Back-End y Database.</li>
-      <li>My main technological skills are Javascript, CSS, HTML, React and Redux, although I also have knowledge in Node.js, Express, Sequelize and PostgreSQL.</li>
-    </ul>
-    </div>
-    <div class="education-grid">
-      <div class="left-image">
-        <img src="/images/EDUCATION-1.jpg" alt="Education Image1" class="full-height">
-      </div>
-      <div class="right-images">
-        <img src="/images/EDUCATION-2.png" alt="Education Image2" class="half-width">
-        <img src="/images/EDUCATION-3.jpg" alt="Education Image2" class="half-width">
-      </div>
-    </div>
-  </section> -->
 
   <!-- LOGO SLIDER -->
 <div id="logo-slider">
@@ -197,12 +176,21 @@
 </div>   
   </section>
   <script>
-   const hamburger = document.getElementById('hamburger');
+  const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
+const menuLinks = document.querySelectorAll('.menu-link');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     menu.classList.toggle('show');
+});
+
+// Close the menu when a link is clicked
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        menu.classList.remove('show');
+    });
 });
 </script>
 
