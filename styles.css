@@ -307,9 +307,7 @@ h2 {
   .about-text{
     padding-left: 90px;
     } 
-    .about-text h2 {
-      margin: 0 0 50px 0;
-    }
+  
 }
 
 
@@ -322,6 +320,15 @@ h2 {
   letter-spacing: 2px;
   font-size: 18px;
   list-style: none;
+}
+.about-text h3 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 40px 0;
 }
 
 /*EDUCATION*/
@@ -398,6 +405,7 @@ h2 {
   letter-spacing: 2px;
   font-size: 18px;
   font-weight: 200;
+  color: #888;
   margin: 5px 0 40px 0;
 }
 
@@ -500,6 +508,7 @@ justify-content: center;
   letter-spacing: 2px;
   font-size: 18px;;
   font-weight: 200;
+  color: #888;
   margin: 5px 0 40px 0;
 }
 
@@ -618,7 +627,8 @@ text-align: center;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
-  font-size: 18px;;
+  font-size: 18px;
+  color: #888;
   font-weight: 300;
   margin: 25px 0;
   }
