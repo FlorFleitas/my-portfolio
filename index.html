@@ -5,64 +5,206 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Florencia's Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <body>
         <!-- Header and Navigation -->
-        <header>
-          <nav>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#work">Work Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="menu-container">
+          <div class="hamburger" id="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+          </div>
+          <nav class="menu" id="menu">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
           </nav>
-        </header>
+      </div>
       
   <!-- HOME Section -->
   <section id="home">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi! I'm Florencia, a Frontend Developer passionate about creativity and design.</p>
+  <div class="hero">
+      <h1>Florencia Fleitas</h1>
+      <p>Web Developer | Web Designer</p>
+  </div>
+  <div class="dots">
+      <span></span><span></span><span></span>
+</div>
   </section>
 
   <!-- ABOUT ME Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a Full Stack Web Developer with a love for frontend development. With 2+ years of experience in creating responsive and engaging websites, I aim to deliver beautiful, functional designs.</p>
-  </section>
+    <div class="about-container">
+      <img src="/images/headshot.png" alt="Florencia Fleitas" class="about-image">
+      <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hey there! I’m a Web Designer and Developer with over 2 years of experience. I specialize in creating visually striking, high-performing websites using HTML, CSS, and JavaScript. As a detail-oriented team player with strong creative and analytical skills, I focus on user-centered design and detailed customization, always ready to bring fresh ideas to the table and deliver impactful results.</p>
+    </div>
+    </div>
+   </section>
 
   <!-- EDUCATION Section -->
   <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Full Stack Web Development Course</strong> - Coding Bootcamp</li>
-      <li><strong>Bachelor's Degree</strong> - University of XYZ</li>
-    </ul>
+    <div class="education-text">
+      <h2>Education</h2>
+      <h3>Full Stack Web Developer</h3>
+      <h4>Henry | 2022</h4>
+      <ul>
+        <li>700+ hours of learning.</li>
+        <li>Front-End, Back-End y Database.</li>
+        <li>My main technological skills are Javascript, CSS, HTML, React and Redux, although I also have knowledge in Node.js, Express, Sequelize and PostgreSQL.</li>
+      </ul>
+    </div>
+    <div class="education-flex">
+      <div class="left-image">
+        <img src="/images/EDUCATION-1.jpg" alt="Education Image1" class="full-height">
+      </div>
+      <div class="right-images">
+        <img src="/images/EDUCATION-2.png" alt="Education Image2" class="half-width">
+        <img src="/images/EDUCATION-3.jpg" alt="Education Image3" class="half-width">
+      </div>
+    </div>
   </section>
+  <!-- <section id="education">
+    <div class="education-text">
+    <h2>Education</h2>
+    <h3>Full Stack Web Developer</h3>
+    <h4>Henry | 2022</h4>
+    <ul>
+      <li>700+ hours of learning.</li>
+      <li>Front-End, Back-End y Database.</li>
+      <li>My main technological skills are Javascript, CSS, HTML, React and Redux, although I also have knowledge in Node.js, Express, Sequelize and PostgreSQL.</li>
+    </ul>
+    </div>
+    <div class="education-grid">
+      <div class="left-image">
+        <img src="/images/EDUCATION-1.jpg" alt="Education Image1" class="full-height">
+      </div>
+      <div class="right-images">
+        <img src="/images/EDUCATION-2.png" alt="Education Image2" class="half-width">
+        <img src="/images/EDUCATION-3.jpg" alt="Education Image2" class="half-width">
+      </div>
+    </div>
+  </section> -->
+
+  <!-- LOGO SLIDER -->
+<div id="logo-slider">
+  <div class="slider">
+    <div class="slider-items">
+      <img src="/images/technologies/js.png" alt="Logo 1">
+      <img src="/images/technologies/html.png" alt="Logo 2">
+      <img src="/images/technologies/css-logo.png" alt="Logo 3">
+      <img src="/images/technologies/react.png" alt="Logo 4">
+      <img src="/images/technologies/redux.png" alt="Logo 5">
+    <!-- CLONE -->
+      <img src="/images/technologies/js.png" alt="Logo 1">
+      <img src="/images/technologies/html.png" alt="Logo 2">
+      <img src="/images/technologies/css-logo.png" alt="Logo 3">
+      <img src="/images/technologies/react.png" alt="Logo 4">
+      <img src="/images/technologies/redux.png" alt="Logo 5">
+    </div>
+  </div>
+</div>
 
   <!-- WORK EXPERIENCE Section -->
   <section id="work">
+    <div class="work-container">
+      <img src="/images/WORK.jpg" alt="work" class="work-image">
+      <div class="work-text">
     <h2>Work Experience</h2>
-    <div>
-      <h3>Frontend Developer at Luxury Presence</h3>
-      <p>Responsibilities: Design consulting, creating and building websites, responsive web design.</p>
+    <h3>Web Builder</h3>
+    <h4>Luxury Presence | 2022 - Present</h4>
+    <p> I specialize in creating and building websites that are meticulously tailored to meet clients' specific needs and brand aesthetics, ensuring a seamless alignment with their vision. I develop responsive, high-quality web pages fully optimized experiences across all devices.
+
+      Recognized as a top performer in my role, I am known for my exceptional time management, creativity, and strong technical skills.</p>
     </div>
+  </div>
   </section>
 
   <!-- PROJECTS Section -->
   <section id="projects">
     <h2>My Projects</h2>
     <p>A showcase of my recent work and personal projects.</p>
+    <div class="projects-grid">
+        <div class="project-card">
+            <a href="https://ashleymateorealtor.com/" target="_blank">
+                <img src="/images/projects/AshleyMateo.png" alt="Ashley Mateo">
+                <h4>Ashley Mateo</h4>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="https://p-d9587f58-f434-4349-a3d8-9cab2d64e06e.presencepreview.site/" target="_blank">
+                <img src="/images/projects/angelakeef.png" alt="Angela D. Keef">
+                <h4>Angela D. Keef</h4>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="https://westkernproperties.com/" target="_blank">
+                <img src="/images/projects/Windi.png" alt="Windi Portenga">
+                <h4>Windi Portenga</h4>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="https://p-df402c2b-385b-431d-841f-2a9d1defbb0a.presencepreview.site/" target="_blank">
+                <img src="/images/projects/jamila-l.png" alt="Jamila Luaders">
+                <h4>Jamila Luaders</h4>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="https://crestonandholly.com/" target="_blank">
+                <img src="/images/projects/crestonandholly.png" alt="Creston and Holly Inderrieden">
+                <h4>Creston and Holly Inderrieden</h4>
+            </a>
+        </div>
+        <div class="project-card">
+            <a href="https://p-9e121d95-4612-443b-bf70-28aa5d3b3afa.presencepreview.site/" target="_blank">
+                <img src="/images/projects/TeamBruceBaker.png" alt="Team Bruce Baker">
+                <h4>Team Bruce Baker</h4>
+            </a>
+        </div>
+    </div>
   </section>
 
   <!-- CONTACT Section -->
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out!</p>
-    <address>Email: florencia@example.com</address>
+    <div class="contact-text">
+    <h2>Thank you</h2>
+    <p>I appreciate your time and consideration. Thanks for stopping by.</p>
+  </div>
+  <div class="footer">
+    <img src="/images/signature (1).png" alt="signature" class="signature">
+    <h4>Feel free to reach out!</h4>
+    <div class="socials">
+      <a href="mailto:flor1197@hotmail.com" target="_blank">
+        <img src="images/socials/email.png" alt="Email">
+    </a>
+      
+      <a href="https://github.com/FlorFleitas" target="_blank">
+          <img src="images/socials/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/maria-florencia-fleitas/" target="_blank">
+        <img src="images/socials/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>   
+</div>   
   </section>
+  <script>
+   const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('show');
+});
+</script>
+
 </body>
 </html>
