@@ -189,55 +189,7 @@
       </div>
     </div>
   </section>
-  <script>
-    /* START -- Hamburguer functinonality*/
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-    const menuLinks = document.querySelectorAll('.menu-link');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      menu.classList.toggle('show');
-    });
-
-    // Close the menu when a link is clicked
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        menu.classList.remove('show');
-      });
-    });
-    /* END -- Hamburguer functinonality*/
-
-    /* START -- Logo slider functionality*/
-    const slider = document.querySelector('.slider');
-    const sliderItems = document.querySelector('.slider-items');
-
-    const clonedItems = sliderItems.innerHTML;
-    sliderItems.innerHTML += clonedItems;
-
-    slider.style.width = `${sliderItems.scrollWidth}px`;
-
-    // Function to keep the slider moving
-    function startSlider() {
-      let scrollAmount = 0;
-      const scrollStep = .1; // How fast the slider moves
-
-      const interval = setInterval(() => {
-        scrollAmount += scrollStep;
-        sliderItems.style.transform = `translateX(-${scrollAmount}px)`;
-
-        // Reset position if reached the end of the cloned items
-        if (scrollAmount >= sliderItems.scrollWidth / 2) {
-          scrollAmount = 0;
-        }
-      }, 16);
-    }
-
-    startSlider();
-    /* END -- Logo slider functionality*/
-
-  </script>
+  <script src="script.js" defer></script>
 
 </body>
 
