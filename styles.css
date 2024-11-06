@@ -594,7 +594,7 @@ h2 {
   letter-spacing: 2px;
 }
 
-.project-card a h4 {
+.project-card a h3 {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
@@ -639,7 +639,7 @@ h2 {
   margin: 20px 0;
 }
 
-#contact h4 {
+#contact h3 {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
