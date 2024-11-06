@@ -426,10 +426,9 @@ h2 {
 #logo-slider {
   overflow: hidden;
   width: 100%;
-  position: relative;
 }
 
-@media (width>768px) {
+@media (min-width: 768px) {
   #logo-slider {
     padding: 90px 0;
   }
@@ -437,7 +436,7 @@ h2 {
 
 .slider {
   display: flex;
-  animation: scroll 60s linear infinite;
+  flex-wrap: nowrap;
 }
 
 .slider-items {
@@ -450,18 +449,14 @@ h2 {
   margin: 0 15px;
   filter: invert(0%) sepia(5%) saturate(3064%) hue-rotate(307deg) brightness(94%) contrast(80%);
 }
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+@keyframes slide {
+  from {
+      transform: translateX(0);
   }
-
-  100% {
-    transform: translateX(-50%);
+  to {
+      transform: translateX(-100%);
   }
 }
-
-
 
 /*WORK EXPERIENCE*/
 
@@ -663,6 +658,7 @@ h2 {
 .socials img {
   width: 50px;
   height: 50px;
+
 }
 
 #loom-companion-mv3 {

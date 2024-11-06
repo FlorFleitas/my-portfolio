@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.classList.remove("show");  // Close the menu
             hamburger.classList.remove("active");  // Remove the active state from the hamburger
         });
-    });   
+    });
+   
 });
 
 
@@ -32,7 +33,7 @@ function startSlider() {
         scrollAmount += scrollStep;
         sliderItems.style.transform = `translateX(-${scrollAmount}px)`;
 
-        if (scrollAmount >= sliderItems.scrollWidth / 2) {
+        if (scrollAmount >= sliderItems.scrollWidth / 5) {
             scrollAmount = 0;
             sliderItems.style.transform = "translateX(0)";
         }
