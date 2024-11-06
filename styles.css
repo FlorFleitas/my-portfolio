@@ -258,11 +258,13 @@ h2 {
 
 /* SCROLL DOWN ARROW on home */
 
+
 .scroll-down {
   position: absolute;
   bottom: 80px; 
   left: 50%;
   transform: translateX(-50%);
+
 }
 @media (max-width: 768px) {
   .scroll-down {
@@ -285,6 +287,7 @@ h2 {
   color: #1a1a1a;
   text-decoration: none;
   animation: bounce 1.5s infinite; 
+  padding: 20px;
 }
 
 .arrow {
