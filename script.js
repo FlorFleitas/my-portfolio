@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             hamburger.classList.remove("active");  // Remove the active state from the hamburger
         });
     });
-   
+
 });
 
 
@@ -41,3 +41,22 @@ function startSlider() {
 }
 
 document.addEventListener("DOMContentLoaded", startSlider);
+
+/* BACK TO TOP BUTTON */
+
+// Obtener el botón
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+// Mostrar el botón al desplazarse más de 100px
+window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+};
+
+// Desplazarse hacia arriba al hacer clic en el botón
+backToTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
