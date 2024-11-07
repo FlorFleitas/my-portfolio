@@ -73,9 +73,30 @@ document.querySelector('.scroll-link').addEventListener('click', function (e) {
 const logo = document.getElementById('logo');
 const menuContainer = document.querySelector('.menu-container');
 const homeSection = document.getElementById('home');
-
 const homeHeight = homeSection.offsetHeight;
 
+let lastScrollTop = 0; // Store the last scroll position
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    // If scrolling down, hide the header
+    if (currentScroll > lastScrollTop) {
+        menuContainer.classList.add('hidden');
+        logo.classList.remove('show'); // Optionally hide the logo when scrolling down
+    } else {
+        // If scrolling up, show the header
+        menuContainer.classList.remove('hidden');
+        if (currentScroll > homeHeight / 2) {
+            logo.classList.add('show');
+        }
+    }
+
+    // Update the last scroll position
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+/* HEADER LOGO AND DECORATION LINE ON SCROLL (Previous Behavior) */
 window.addEventListener('scroll', () => {
     if (window.scrollY > homeHeight / 2) {
         logo.classList.add('show');
