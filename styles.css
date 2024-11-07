@@ -856,6 +856,10 @@ h2 {
 
   #projects {
     padding: 60px 40px 0 40px;
+    align-items: center;
+  }
+  #projects p {
+    max-width: 200px;
   }
 
   #contact {
