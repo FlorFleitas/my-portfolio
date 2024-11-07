@@ -82,34 +82,30 @@ const menuContainer = document.querySelector('.menu-container');
 const homeSection = document.getElementById('home');
 const homeHeight = homeSection.offsetHeight;
 
-let lastScrollTop = 0; // Store the last scroll position
+let lastScrollTop = 0; 
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-    // If scrolling down, hide the header
     if (currentScroll > lastScrollTop) {
         menuContainer.classList.add('hidden');
-        logo.classList.remove('show'); // Optionally hide the logo when scrolling down
+        logo.classList.add('hide');
+        logo.classList.remove('show');
     } else {
-        // If scrolling up, show the header
         menuContainer.classList.remove('hidden');
-        if (currentScroll > homeHeight / 2) {
-            logo.classList.add('show');
+        logo.classList.remove('hide');
+        logo.classList.add('show');
+    }
+
+    if (currentScroll > homeHeight / 2) {
+        menuContainer.classList.add('hide'); 
+        logo.classList.add('hide'); 
+    } else {
+        menuContainer.classList.remove('hide'); 
+        if (!menuContainer.classList.contains('hide')) {
+            logo.classList.remove('show'); 
         }
     }
 
-    // Update the last scroll position
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
-
-/* HEADER LOGO AND DECORATION LINE ON SCROLL (Previous Behavior) */
-window.addEventListener('scroll', () => {
-    if (window.scrollY > homeHeight / 2) {
-        logo.classList.add('show');
-        menuContainer.classList.add('hide');
-    } else {
-        logo.classList.remove('show');
-        menuContainer.classList.remove('hide');
-    }
 });
