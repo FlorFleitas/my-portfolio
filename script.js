@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuLinks.forEach(function (link) {
         link.addEventListener("click", function () {
-            menu.classList.remove("show");  
-            hamburger.classList.remove("active");  
+            menu.classList.remove("show");
+            hamburger.classList.remove("active");
         });
     });
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Logo slider functionality
 const sliderItems = document.querySelector(".slider-items");
 let scrollAmount = 0;
-const scrollStep = 0.5; 
+const scrollStep = 0.5;
 
 function startSlider() {
     const interval = setInterval(() => {
@@ -55,14 +55,33 @@ backToTopBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+
 /* SCROLL DOWN ARROW - HOME */
-document.querySelector('.scroll-link').addEventListener('click', function(e) {
-    e.preventDefault();  
-    
+document.querySelector('.scroll-link').addEventListener('click', function (e) {
+    e.preventDefault();
+
     const targetId = this.getAttribute('href');
     const targetElement = document.querySelector(targetId);
-    
+
     targetElement.scrollIntoView({
-      behavior: 'smooth'
+        behavior: 'smooth'
     });
-  });
+});
+
+
+/* HEADER LOGO AND DECORATION LINE ON SCROLL */
+const logo = document.getElementById('logo');
+const menuContainer = document.querySelector('.menu-container');
+const homeSection = document.getElementById('home');
+
+const homeHeight = homeSection.offsetHeight;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        logo.classList.add('show');
+        menuContainer.classList.add('hide');
+    } else {
+        logo.classList.remove('show');
+        menuContainer.classList.remove('hide');
+    }
+});
