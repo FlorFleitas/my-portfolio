@@ -77,13 +77,13 @@ section {
     height: auto;
     padding-left: 90px;
   }
-
+  @media (min-width:768px) {
   .logo.show {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease-in-out, visibility 0s linear 0s;
   }
-
+  }
 
 nav ul {
   list-style: none;
