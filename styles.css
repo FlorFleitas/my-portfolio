@@ -270,15 +270,6 @@ h2 {
   .scroll-down {
     bottom: 180px; 
   }
-  .arrow::before {
-    transform: rotate(45deg);
-    left: 12px;
-  }
-  
-  .arrow::after {
-    transform: rotate(-45deg);
-    right: 12px;
-  }
 }
 
 .scroll-link {
@@ -411,7 +402,6 @@ h2 {
   font-style: normal;
   letter-spacing: 2px;
   font-size: 18px;
-  list-style: none;
 }
 
 .about-text h3 {
@@ -861,6 +851,9 @@ position: relative;
 
   .education-flex {
     display: none;
+  }
+  #contact p {
+    max-width: 360px;
   }
 }
 
