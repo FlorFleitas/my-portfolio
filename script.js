@@ -1,25 +1,32 @@
-/*LOGO SLIDER FUNCTIONALITY*/
+// Hamburguer menu functionality
 
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("menu");
     const menuLinks = menu.querySelectorAll("a");
+    const body = document.body; 
+
+    function toggleScroll() {
+        body.classList.toggle('no-scroll');
+    }
 
     hamburger.addEventListener("click", function () {
         menu.classList.toggle("show");
-
-
         hamburger.classList.toggle("active");
+
+        toggleScroll();
     });
 
     menuLinks.forEach(function (link) {
         link.addEventListener("click", function () {
             menu.classList.remove("show");
             hamburger.classList.remove("active");
+
+            body.classList.remove('no-scroll');
         });
     });
-
 });
+
 
 
 // Logo slider functionality

@@ -830,6 +830,9 @@ h2 {
     padding: 60px 40px;
     /* Reduce padding for mobile screens */
   }
+  body.no-scroll {
+    overflow: hidden;
+  }
 
   .about-container,
   .work-container {
